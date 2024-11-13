@@ -1,0 +1,179 @@
+/* Google Font 적용 */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('book-background.jpg'); /* 책 사진 배경 */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* 반투명 배경 */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  background-color: #2c3e50; /* 다크 톤 배경 */
+  color: #ecf0f1; /* 연한 색상 */
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 글 목록 디자인 */
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.post-card {
+  background-color: #a3c3d8ca; /* 푸른 색으로 변경 */
+  margin: 15px;
+  padding: 15px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+}
+
+.post-card h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #2c3e50; /* 글자 색상을 흰색으로 변경 */
+}
+
+.post-card p {
+  color: #2c3e50; /* 내용 색상도 밝은 색으로 */
+}
+
+/* 게시글 제목 색상 변경 */
+h2 {
+  color: #2c3e50; /* 글자 색을 #2c3e50으로 변경 */
+}
+
+/* 버튼 스타일 */
+button {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+  background-color: #e68787;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* 수정 버튼 */
+.edit-btn {
+  background-color: #efbc6a;
+  color: #fff;
+  margin-left: 10px; /* 삭제 버튼과 여백 조정 */
+}
+
+.edit-btn:hover {
+  background-color: #e67e22;
+}
+
+/* 새 글 작성 페이지 디자인 */
+.write form {
+  background-color: #ecf0f1;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  margin: 30px auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.write form:hover {
+  transform: translateY(-5px);
+}
+
+.write input, .write textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.write input:focus, .write textarea:focus {
+  border-color: #2c3e50;
+  outline: none;
+  box-shadow: 0 0 8px rgba(44, 62, 80, 0.3);
+}
+
+.write textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.write button {
+  padding: 15px;
+  background-color: #2c3e50;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.3);
+}
+
+.write button:hover {
+  background-color: #34495e;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+  .post-list {
+    flex-direction: column;
+  }
+
+  .write form {
+    width: 90%;
+  }
+}
