@@ -1,4 +1,4 @@
-package io.github.herbpot.bookai.schema;
+package io.github.herbpot.bookai.Schema;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
