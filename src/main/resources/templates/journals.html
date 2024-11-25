@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>저널 목록</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+    <header>
+        <h1>저널 목록</h1>
+    </header>
+    <main>
+        <div class="journal-list">
+            <h2>저널 목록</h2>
+            <ul>
+                <!-- Thymeleaf를 이용하여 동적으로 데이터 표시 -->
+                <li th:each="journal : ${journals}">
+                    <h3 th:text="${journal.title}">저널 제목</h3>
+                    <p>작성자: <span th:text="${journal.author}">저자</span></p>
+                    <p>내용: <span th:text="${journal.content}">저널 내용</span></p>
+                    <p>책 ID: <span th:text="${journal.bookId}">책 ID</span></p>
+                </li>
+            </ul>
+        </div>
+    </main>
+</div>
+</body>
+</html>
